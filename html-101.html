@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <style>
+            .box{
+                transition: 1.5s;
+                background-color: aqua;
+                width:100px;
+                height:100px;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+
+            }
+            .parent{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .box:hover{
+                transform:scale(5);
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p><span><mark>LOGIN</mark></span><span style="float:right"><mark>Register</mark></span></p>
+        <h1>Registration Form</h1>
+        <form onsubmit="if(name.value==''){alert('Name field cannot be empty');}if(age.value<18){alert('Age should be greater than 18')}">
+            Name:<input type="text" name="name"><br>
+            Age:<input type="number" name="age"><br>
+            Gender:<br><input type="radio">Male<br>
+            <input type="radio">Female<br>
+            <input type="radio">Other<br>
+            College:<select>
+                <option>IIT</option><br>
+                <option>IIIT</option><br>
+                <option>NIT</option><br>
+
+            </select><br>
+            <input type="submit">
+            <input type="reset">
+
+
+        </form>
+        <div class="parent">
+        <div class="box">
+            This is a box!
+        </div></div>
+        <button onclick="alert('Do not click me!')">Click ME</button>
+    </body>
+</html>
